@@ -1,37 +1,44 @@
-# RESUME MATCHER
+# RESUME MATCHER - Frontend
 
-RESUME MATCHER is an NLP-powered system designed to match resumes with job descriptions, providing users with a similarity score, skill analysis, and actionable suggestions for resume improvement.
+This project is the frontend for RESUME MATCHER, an NLP-powered system to match resumes with job descriptions. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project consists of two main components:
+## Prerequisites
 
--   **Frontend**: A React-based user interface for uploading resumes and job descriptions, and viewing the analysis results.
--   **Backend**: A Python FastAPI application that handles resume parsing, NLP processing, and matching logic.
+- Node.js and npm (or yarn)
+- Backend server running (see backend README for instructions)
 
+## Available Scripts
 
-## Getting Started
+In the project directory, you can run:
 
-To run the full application, you need to start both the backend server and the frontend development server.
+### `npm install`
 
-1.  **Backend Setup & Start:** Please refer to the [backend/README.md](./backend/README.md) for instructions on setting up and running the backend API.
-2.  **Frontend Setup & Start:** Please refer to the [frontend/README.md](./frontend/README.md) for instructions on setting up and running the frontend application.
+Installs all the necessary dependencies for the frontend application.
 
-## Core Technologies
+### `npm start`
 
--   **Natural Language Processing (NLP):**
-    -   spaCy for Named Entity Recognition (skill extraction)
-    -   Sentence-Transformers for semantic text embeddings and similarity calculation
--   **Backend:** Python, FastAPI, Uvicorn
--   **Frontend:** React, JavaScript
+Runs the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## How it Works
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1.  The user uploads their resume (PDF or DOCX) and provides a job description through the frontend.
-2.  The frontend sends this data to the backend API.
-3.  The backend parses the resume text.
-4.  It then uses NLP models to:
-    -   Generate semantic embeddings for both the resume and job description.
-    -   Calculate a cosine similarity score between them.
-    -   Extract key skills from both texts.
-    -   Identify skills present in the job description but missing from the resume.
-    -   Generate personalized suggestions to improve the resume based on its content and common best practices.
-5.  The backend returns these results (score, skills, suggestions) to the frontend for display.
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+## Functionality
+
+- Upload a resume (PDF or DOCX).
+- Paste a job description.
+- View a match score, extracted skills, missing skills, and suggestions for improvement.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
